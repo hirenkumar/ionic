@@ -14,7 +14,7 @@ Start a new project by following our quick Getting Started guide. We would love 
 
 Overview
 ------------------
--> Getcashy is budgeting ionic app.
+-> This app is budgeting ionic app.
 -> Add expense and income details.
 -> Manage budget as profit , loss and net profit.
 -> Graphical view of profit & loss Details.
