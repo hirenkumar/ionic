@@ -1,0 +1,244 @@
+<ion-view>
+    <ion-content class="nav-2"> 
+
+    <div id="mydiv" ng-show="loadregister">
+    <img src="img/loading_300.gif" class="ajax-loader"/>
+</div>
+
+
+        <div class="">
+            <div ng-include src="'app/directives/headerNoAuthenticated.html'"></div>
+           
+             <div class="row">
+                <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1  r-2x padder-md">
+                <span class="steplogos1 logo1 activelogo" id="step1logo"><i class="fa fa-user stepiconsize"></i></span><hr style="border: 1px solid #bdc3c7;">
+                <span class="steplogos2 logo2" id="step2logo"><i class="fa fa-list-alt stepiconsize"></i></span>
+                <span class="steplogos3 logo3" id="step3logo"><i class="fa fa-check stepiconsize"></i></span>
+                </div>          
+             </div>
+              <div class="row" style="margin-bottom: 20px;">
+                <div class="col-lg-6 col-lg-offset-3  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <span class="logo1text" id="text1">Create Account</span>
+                <span class="logo2text" id="text2">Setup Categories</span>
+                <span class="logo3text" id="text3">Ready</span>
+                </div>
+           
+             </div>
+         
+
+            <div class="row signup-row" id="maindiv">			
+			<form  name="signupForm" style="width:100%;" ng-submit="register(sgnfrm)">			 
+              <div class="col-sm-12" id="step-1" ng-show="step==1">			 
+			   <hr class="m-t-md">
+                <p class="text-danger" id="register-errors"></p>
+			    <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box ">
+                    <div class="rndfilediv">
+                        <input type="file" name="UserImage" class="rndfile" onchange="angular.element(this).scope().LoadFileData(this.files)" accept="image/png, image/jpeg"  />
+                    </div>
+                     <div ng-if="signupForm.UserImage.$invalid" ng-messages="signupForm.UserImage.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a User Image</div>
+                        </div>
+
+
+                    <div class="input-group" ng-class="(signupForm.Username.$invalid && signupForm.Username.$dirty)  || ( signupForm.Username.$pristine  &&  step1submitted) ? '': 'cnt'">
+
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control inputtext" placeholder="UserName" name="Username" ng-model="sgnfrm.Username" ng-required="true" validate-Username>
+                    </div>
+                      <div ng-if="(signupForm.Username.$invalid && signupForm.Username.$dirty)  || ( signupForm.Username.$pristine  &&  step1submitted)" ng-messages="signupForm.Username.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a User Name</div>
+                            <div ng-message="username">User Name must be at least 5 characters long. Special characters are not allowed</div>
+                        </div>
+
+                    <div class="input-group" ng-class="(signupForm.EmailId.$invalid && signupForm.EmailId.$dirty)  || ( signupForm.EmailId. $pristine  &&  step1submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                      <input type="email" class="form-control inputtext" placeholder="Email Id"name="EmailId" ng-model="sgnfrm.EmailId" ng-required="true"
+                        ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/">
+                    </div>
+                      <div ng-if="(signupForm.EmailId.$invalid && signupForm.EmailId.$dirty)  || ( signupForm.EmailId. $pristine  &&  step1submitted)" ng-messages="signupForm.EmailId.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide an email address</div>
+                            <div ng-message="email">Email address is invalid</div>
+                        </div>
+
+
+
+
+                    <div class="input-group "ng-class="(signupForm.Password.$invalid && signupForm.Password.$dirty)  || ( signupForm.Password. $pristine  &&  step1submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-lock" style="font-size: 20px;"></i></span>
+                        <input type="Password" class="form-control inputtext" placeholder="Password" name="Password" ng-model="sgnfrm.Password" ng-required="true">
+                    </div>
+                      <div ng-if="(signupForm.Password.$invalid && signupForm.Password.$dirty)  || ( signupForm.Password. $pristine  &&  step1submitted)" ng-messages="signupForm.Password.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a password</div>
+                        </div>
+
+
+
+
+
+                    <div class="input-group cnt" ng-class="{'has-error' : (!signupForm.repeatPassword.$pristine && signupForm.Password.$modelValue !== signupForm.repeatPassword.$modelValue) || passwordMismatch}">
+                        <span class="input-group-addon"><i class="fa fa-lock" style="font-size: 20px;"></i></span>
+                        <input type="password" class="form-control inputtext" placeholder="Confirm Password"name="repeatPassword" ng-model="repeatPassword" required   ng-change="myFunction()">
+                    </div>
+                      <p class="small text-left text-danger" ng-if="(!signupForm.repeatPassword.$pristine && signupForm.Password.$modelValue !== signupForm.repeatPassword.$modelValue) || passwordMismatch">Passwords do not match</p>
+                    <div class="input-group">
+                        <input type="radio" name="UserType" class="radio-inline" checked="checked"  ng-value="'User'"  ng-model="sgnfrm.Role"/>     User                <input type="radio" name="UserType" class="radio-inline"  value="Advisor" ng-value="'Advisor'" ng-model="sgnfrm.Role"/>     Advisor
+                    </div>
+
+                    <button type="button" ng-click="steponefinish(signupForm)" ng-class="step1submitted ? 'sbtbtnblue':'sbtbtn'"></button>
+
+                    <div>
+                        or sign in with
+                    </div>
+                    <div class="btn-outer">
+                        <div class="btn-inner"><button type="button" class="fbbtn" ng-click="fbLogin()"></button> </div>
+                        <div class="btn-inner"><button type="button" class="glplsbtn" ng-click="googleLogin()"></button>   </div>
+                    </div>
+                    <small> By signing up , I agree to <a href="#" class="hyper-color">Terms & Conditions</a> of "Cashy".  </small>
+                </div>
+                <div class="row row-clear-fix"></div>
+                <div  class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="padding-top: 15px;font-size: small;"> Already have an account? <a ui-sref="login" class="hyper-color"><b> SIGN IN</b></a></div>			   
+			  </div>
+			
+			  <div class="col-sm-12" id="step-2" ng-show="step==2">
+              <!-- <img src="img/step-2.png" class="imgwidth"/> -->
+                <hr class="m-t-md">
+
+                 <p class="text-danger" id="register-errors"></p>
+                
+                <div style="color: #000;"> Select some categories to get started.<br />You can always modify this later on.</div>
+                <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box ">
+                    <div class="input-group cnt" style="background-color: #2980b9;margin-bottom: 15px;width: 100%;">
+                      <img src="img/Income20.png" style="float: left;margin:10px;"><span style="color: white;float: left;margin: 2px;">Income</span> 
+                    </div>
+
+                         <ul>
+                            <li data-ng-repeat="i in Incomes">
+
+                                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input id="{{i.CategoryId}}" type="checkbox" value="{{i.CategoryName}}" ng-click="toggleselection(i)" >
+                            <span class="c-indicator"></span> {{i.CategoryName}}
+                        </label>
+                    </div>
+                                                  <!--  <input type="checkbox" ng-model="selected[record.name]"> {{record.name}}-->
+                            </li>
+                        </ul>
+
+
+
+                <!--    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox" value="Wage" >
+                            <span class="c-indicator"></span> Wage
+                        </label>
+                    </div>
+
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox" value="Salary">
+                            <span class="c-indicator"></span> Salary
+                        </label>
+                    </div>
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox" value="Pocket Money">
+                            <span class="c-indicator"></span> Pocket Money
+                        </label>
+                    </div>
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox" value="Gifts">
+                            <span class="c-indicator"></span> Gifts
+                        </label>
+                    </div> -->
+
+                    <div class="input-group cnt " style="background-color: #2980b9;margin-bottom: 15px;width: 100%;">
+                       <img src="img/Expenses20.png"  style="float: left;margin:10px;"><span style="color: white;float: left;margin: 2px;">Expenses</span>
+                    </div>
+
+
+                     <ul>
+                            <li data-ng-repeat="i in expenses">
+
+                                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input id="{{i.CategoryId}}" type="checkbox" value="{{i.CategoryName}}" ng-click="toggleselectionexpense(i)" >
+                            <span class="c-indicator"></span> {{i.CategoryName}}
+                        </label>
+                    </div>
+                            </li>
+                        </ul>
+
+
+
+
+                <!--    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox">
+                            <span class="c-indicator"></span> Travel
+                        </label>
+                    </div>
+
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox">
+                            <span class="c-indicator"></span> Shopping
+                        </label>
+                    </div>
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox">
+                            <span class="c-indicator"></span> Entertainment
+                        </label>
+                    </div>
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox">
+                            <span class="c-indicator"></span> Education
+                        </label>
+                    </div> -->
+                </div>
+                <div class="row row-clear-fix"></div>
+             <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">   
+                <button type="submit" class="sbtbtnblue"></button>
+            </div>
+
+
+
+            </div>
+			 
+
+              <div class="col-sm-12" id="step-3" ng-show="step==3">
+        <!--    <img src="img/step-3.png" class="imgwidth"/> -->
+            <hr class="m-t-md">
+            <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box ">
+               <div class="rdybtn"></div>
+                <span style="color:#82b440;">"CONGRATS"</span>
+                <div style="padding: 30px;"> Lets Start</div>
+                <div>
+                    <a  style="width:70%;" class="index-btn-sign-up btn btn-primary signup-btn" ui-sref="createIncome"><i style="margin: 3px;" class="fa fa-user" ></i><span>Enter Income</span> </a>
+                </div>
+                <div style="margin-top: 15px;margin-bottom: 50px;">
+                    
+                    <a style="width:70%;" class="index-btn-sign-up btn btn-primary signup-btn" ui-sref="createExpense"><i style="margin: 3px;" class="fa fa-user" ></i><span>Enter Expense</span> </a>
+                </div>
+            </div>
+           
+        </div>
+
+			</form>
+
+
+
+
+
+
+
+
+
+
+			
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

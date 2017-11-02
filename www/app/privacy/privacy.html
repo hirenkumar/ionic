@@ -1,0 +1,223 @@
+<style>
+ @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+</style>
+<ion-view>
+ <ion-content>  
+ <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container tbl-container" id="main-content"> 
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Privacy Policy</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body" style="text-align: justify;">
+            <p>
+                Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
+            </p>
+
+            <p>
+                <strong>1.</strong> Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
+            </p>
+
+            <p>
+                <strong>2.</strong> We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.
+            </p>
+
+            <p>
+                <strong>3.</strong> We will only retain personal information as long as necessary for the fulfilment of those purposes.
+            </p>
+
+            <p>
+                <strong>4.</strong> We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+            </p>
+
+            <p>
+                <strong>5.</strong> Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
+            </p>
+
+            <p>
+                <strong>6.</strong> We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
+            </p>
+
+            <p>
+                <strong>7.</strong> We will make readily available to customers information about our policies and practices relating to the management of personal information.
+            </p>
+
+            <p>
+                We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.
+            </p>
+        </div><!-- /.box-body -->
+    </div><!-- container -->
+</div> 
+</ion-content>         
+</ion-view>
+ 

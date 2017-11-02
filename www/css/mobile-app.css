@@ -1,0 +1,38 @@
+#mobile-page-overlay {background: rgba(0, 0, 0, 0.7); position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 99; display: none; width: 100%; height: 100%;}
+
+ #mobile-nav-bar {background: #2980B9; margin-bottom: 20px; position: fixed; left: 0; top: 0; right: 0; z-index: 90; text-align: center;}
+ #mobile-nav-bar #nav-trigger-btn {outline: none; background: none; border: none; padding: 10px 15px; float: left;}
+ #mobile-nav-bar #go-back-btn  {outline: none; background: none; border: none; padding: 10px 15px; float: left;}
+ #mobile-nav-bar #nav-trigger-btn img {max-height: 15px; vertical-align: initial;}
+ #mobile-nav-bar #go-back-btn .fa  {color: #fff; vertical-align: middle;}
+ #mobile-nav-bar #nav-page-title {color: #fff; white-space: nowrap; padding: 10px 5px;}
+
+ .mobile-nav #mobile-nav-menu {position: absolute; top: 0px;left: -230px;bottom: 0; width: 230px;z-index: 999; overflow: auto}
+ .mobile-nav #mobile-nav-menu .mobile-nav-menu-inner {background: #fff;}
+
+ .mobile-nav #mobile-nav-menu a {color:#000; display: block; padding: 10px 0;}
+ .mobile-nav #mobile-nav-menu a .fa {vertical-align: middle; margin-right: 10px;}
+ .mobile-nav #mobile-nav-menu .menu-user {padding: 10px 0;}
+ .mobile-nav #mobile-nav-menu .menu-section {border-bottom: 2px solid #E7E7E7; padding: 20px 20px; font-size: 19px;}
+ .mobile-nav #mobile-nav-menu .menu-section .section-title {color: #1490E0;}
+
+ #main-content {padding-top: 70px;}
+
+.table.pretty {border: 1px solid #eee;}
+.table.pretty tr td:last-child {text-align: right;}
+.table.pretty td {border-left: none; border-right: none; color: #000; font-size: 16px}
+.table.pretty tr.income-t {background: #91A763;}
+.table.pretty tr.expense-t {background: #D87B36;}
+.table.pretty tr.net-t {background: #36A0EF;}
+.table.pretty tr.income-t td, .table.pretty tr.expense-t td, .table.pretty tr.net-t td {color: #fff !important;}
+.table.pretty tr.goal-t, .table.pretty tr.saving-t {background: none;}
+
+ .periodSelectBar {width: 100%; margin-top: 50px; text-align: center; position: fixed; z-index: 99;}
+ .periodSelectBar .selector {background: #363636; color: #fff; padding: 10px 15px;}
+.periodSelectBar .selectMenu {position: fixed; left: 0; right: 0; display: none;}
+ .periodSelectBar .selectMenu .list-group-item {padding-top: 3px; padding-bottom: 3px}
+
+ #chartOptions {margin-bottom: 30px;}
+ .chart-row {margin-top: 0;}
+
+ #chart-d .top-goal {margin-top: 0;}

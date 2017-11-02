@@ -1,0 +1,405 @@
+<style>
+#main-content {
+    padding-top: 30px;
+}
+
+.boxheader{
+    background-color: #2980b9;
+padding: 5px;
+color: white;
+text-align: center;
+}
+
+mwl-calendar .cal-day-tick {
+   border: 1px solid #FFF;
+border-top: 0px solid;
+border-radius: 0 0 5px 5px;
+background-color: #fff;
+text-align: center;
+color: rgb(255, 255, 255);
+}
+
+mwl-calendar .cal-day-tick .fa {
+    display: initial;
+    color: black;
+}
+
+mwl-calendar .cal-day-tick {
+    position: absolute;
+    right: 50%;
+    bottom: -24px;
+    padding: 0px 5px;
+    cursor: pointer;
+    z-index: 5;
+    text-align: center;
+    width: 32px;
+    margin-right: -17px;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.no-padder{
+  padding: 0px;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.boxmargin{
+  margin-top:7%;
+}
+.rightarrowmargin{
+  margin-top: -100px;
+}
+.modalbox{
+ min-height: 0px !important;
+width: 290px;
+height: 100%;
+left: 4%;
+top: 6%;
+box-shadow: 0px 0px 3px 2px #cacaca;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+/* STYLES GO HERE */
+}
+
+@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 640px) {
+.boxmargin{
+  margin-top:7%;
+}
+.rightarrowmargin{
+  margin-top: -100px;
+}
+.modalbox{
+  min-height:0px !important;
+  width:330px; 
+  height: 100%;
+  left: 4%;
+top: 6%;
+box-shadow: 0px 0px 3px 2px #cacaca;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+/* STYLES GO HERE */
+}
+
+
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+.modalbox{
+  min-height:0px !important;
+  width:709px; 
+  height: 100%;
+  left: 4%;
+top: 6%;
+box-shadow: 0px 0px 3px 2px #cacaca;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+   .modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+.boxmargin{
+  margin-top:10%;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+.boxmargin{
+  margin-top:7%;
+}
+.modalbox{
+  width:500px; 
+  height: 500px;
+  left:38%;
+}
+.modal-backdrop{
+  background-color: #FFF !important;
+}
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.boxmargin{
+  margin-top:7%;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.boxmargin{
+  margin-top:7%;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.boxmargin{
+  margin-top:22%;
+  margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+.modal-backdrop{
+  background-color: #edf0f5 !important;
+}
+}
+
+
+hr {
+    /* margin-top: 1rem; */
+    /* margin-bottom: 1rem; */
+    border: 0;
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
+.breakdown{
+  cursor:pointer;
+}
+.breakdown:hover{
+  background-color: #cdcdcd;
+}
+
+mwl-calendar .cal-month-box .cal-day-today span[data-cal-date] {
+    font-size: 1.2em !important;
+}
+
+
+</style>
+<ion-view>
+<ion-content>
+
+  <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+ 
+<div class="container tbl-container signup-box boxmargin" style="padding: 0px;" id="main-content">
+     <div class="boxheader">My Financial Diary</div>  
+     
+     <div class="" style="margin-top: 10px;">
+       <button
+          class="btn btn-primary pull-left pull-none-xs"
+          mwl-date-modifier
+          date="viewDate"
+          decrement="calendarView"
+          ng-click="cellIsOpen = false" style="background-color: #2980b9;">
+         <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+      <h5 class="text-center col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">{{calendarTitle }}</h5>
+      <button
+          class="btn btn-primary pull-right pull-none-xs rightarrowmargin"
+          mwl-date-modifier
+          date="viewDate"
+          increment="calendarView"
+          ng-click="cellIsOpen = false" style="background-color: #2980b9;">
+       <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+         <div class="row row-clear-fix"></div>
+     </div>
+
+
+ 
+ <div>
+
+   <div class="row row-clear-fix"></div>
+   
+  <mwl-calendar
+    events="AllEvent"
+    view="calendarView"
+    view-title="calendarTitle"
+    view-date="viewDate"
+    on-event-click="eventClicked(calendarEvent,calendarDate)"
+    on-event-times-changed="eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+    cell-is-open="cellIsOpen"
+   on-drill-down-click="false"
+   on-view-change-click="false"
+    cell-modifier="modifyCell(calendarCell)"
+    cell-auto-open-disabled="true"
+  
+    on-timespan-click="timespanClicked(calendarDate, calendarCell)">
+  </mwl-calendar>
+</div>
+  
+</div>
+</ion-content>
+</ion-view>
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view class="modalbox">
+    <ion-header-bar>
+      <h1 class="title">{{ModelHeaderDate}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="modal-body">
+
+         <div class="row signup-row" id="maindiv"> 
+
+         <div class="col-lg-12 col-lg-offset-0  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1  b-a r-2x padder-md bg-white signup-box no-padder">
+
+           <div class="boxheader" >
+            <span style="float: left;"><i class="fa fa-plus" style="cursor: pointer;" aria-hidden="true" ng-model="collapsed" ng-click="collapsed=!collapsed"></i></span>
+           {{getevent.title}}</div>  
+
+            <div ng-show="collapsed">
+
+              <div ng-repeat="d in ModalDetails" class="col-sm-12 col-lg-12 col-md-12 col-xs-12 breakdown" style="padding: 5px;border-bottom: 1px solid #d5d5d5;" ng-click="BreakdownClick(d.Id,getevent.Type)">                
+                <div class="col-sm-6 col-xs-12 " style="text-align:left;"> <span><i class="fa {{d.CategoryImage}}" style="font-size:20px;margin-right: 5px;"></i>{{d.CategoryName}}:</span></div>
+                 <div class="col-sm-6 col-xs-12" style="text-align: left;">${{d.Amount}} <div ng-if='d.Frequency != "null"' >(Recurring {{d.Frequency}})</div></div>            
+              <hr> 
+              </div>
+            </div>
+         </div>
+         </div>   
+    </ion-content>
+  </ion-modal-view>
+</script>

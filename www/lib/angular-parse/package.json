@@ -1,0 +1,62 @@
+{
+  "name": "angular-parse",
+  "version": "0.2.2",
+  "description": "Angular wrapper for Parse.com JavaScript SDK.",
+  "license": "MIT",
+  "author": {
+    "email": "ivnivnch@gmail.com"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "parse",
+    "parsesdk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivnivnch/angular-parse.git"
+  },
+  "homepage": "https://github.com/ivnivnch/angular-parse",
+  "scripts": {
+    "build": "webpack",
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "angular": "^1.4.6",
+    "angular-mocks": "^1.4.6",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "parse": "^1.6.3",
+    "webpack": "^1.12.2"
+  },
+  "gitHead": "e2a63d5bea8b7bc55d61f1b5b0bffa4fa7ca561e",
+  "bugs": {
+    "url": "https://github.com/ivnivnch/angular-parse/issues"
+  },
+  "_id": "angular-parse@0.2.2",
+  "_shasum": "abdcea01b07233c9b047ab7b1ddc501b96873955",
+  "_from": "angular-parse@latest",
+  "_npmVersion": "2.14.3",
+  "_nodeVersion": "4.1.0",
+  "_npmUser": {
+    "name": "ivnivnch",
+    "email": "ivnivnch@gmail.com"
+  },
+  "dist": {
+    "shasum": "abdcea01b07233c9b047ab7b1ddc501b96873955",
+    "tarball": "http://registry.npmjs.org/angular-parse/-/angular-parse-0.2.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "ivnivnch",
+      "email": "ivnivnch@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-parse/-/angular-parse-0.2.2.tgz",
+  "readme": "ERROR: No README data found!"
+}

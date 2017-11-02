@@ -1,0 +1,59 @@
+<style>
+.input-text{
+    text-transform:none !important;
+}
+</style>
+
+<ion-view>
+    <ion-content class="nav-2">  
+        <div class="">
+            <div ng-include src="'app/directives/headerNoAuthenticated.html'"></div>
+
+           <div class="row signup-row login-row">
+<div class="col-sm-12">
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 col-md-offset-3 col-lg-offset-4">  <p class="text-danger" id="login-errors"></p> </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 col-md-offset-3 col-lg-offset-4 signup-box bg-white">
+
+            <form ng-submit="frmLogin.$valid ?  login(lgn) : ''" name="frmLogin" novalidate >
+                <div class="col-lg-12 col-md-12 col-sm-12" id="step-1">
+
+                   <div> <span style="font-size:45px;">Login</span></div>
+                   
+
+                    <div class="input-group" ng-class="(frmLogin.Username.$invalid && frmLogin.Username.$dirty)  || ( frmLogin.Username.$pristine && frmLogin.$submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control input-text " placeholder="Username" name="Username" ng-model="lgn.Username" ng-required="true" >
+                   <!--     <p class="help-block text-left" ng-show="frmLogin.Username.$invalid && !frmLogin.Username.$pristine">User Name is required</p> -->
+                    </div>
+                     <div ng-if="(frmLogin.Username.$invalid && frmLogin.Username.$dirty)  || ( frmLogin.Username.$pristine && frmLogin.$submitted)" ng-messages="frmLogin.Username.$error" class="small text-danger text-left">
+                            <div style="font-size: 14px;" >You must provide a Username</div>
+                        </div>
+                    <div class="input-group " ng-class="(frmLogin.Password.$invalid && frmLogin.Password.$dirty) || ( frmLogin.Password.$pristine && frmLogin.$submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="Password" class="form-control " placeholder="Password" name="Password" ng-model="lgn.Password" ng-required="true">
+                       
+                    </div>
+                     <div ng-if="(frmLogin.Password.$invalid && frmLogin.Password.$dirty) || ( frmLogin.Password.$pristine && frmLogin.$submitted) " ng-messages="frmLogin.Password.$error" class="small text-danger text-left">
+                            <div style="font-size: 14px;" >You must provide a password</div>
+                        </div>
+                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input type="checkbox" ng-model="isRemember" ng-change="setRememberStatus()">
+                            <span class="c-indicator"></span> Keep me signed in
+                        </label>
+                        <!-- <a class="fgt-pass" href="forgot-password.html">Forgot Password ?</a> -->
+                    </div>
+                    <button class="index-btn-sign-up btn btn-lg btn-primary " style="width:70%; margin-bottom:40px;" type="submit">Login</button>
+
+
+                </div>
+            </form>
+        </div>
+        <div class="row row-clear-fix"></div>
+        <div style="padding-top: 25px; font-size:small;" class="col-lg-6 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 col-md-offset-3 col-lg-offset-3"> <a href="#" ui-sref="forgotpassword" class="hyper-color" >Forgot My Password ? </a> <br /> Don't have an account? <a ui-sref="signup" class="hyper-color">SIGN UP HERE</a></div>
+    </div>
+</div>
+        </div>                    
+    </ion-content>
+</ion-view>

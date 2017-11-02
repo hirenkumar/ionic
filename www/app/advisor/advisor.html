@@ -1,0 +1,55 @@
+<style>
+.mailtextalign{
+  text-align: left;
+}
+</style>
+
+<ion-view >
+    <ion-content class="nav-2">  
+       
+            <div ng-include src="'app/directives/header.html'"></div>
+
+           <div class="">
+           	 <div class="row signup-row" id="maindiv">	
+           	 	 <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box ">
+           	 	 	<div id="userdetails">
+           	 	 		 <div class="col-sm-12 col-lg-12 col-xs-12" style="padding-bottom: 5%;color: #2980b9;font-size: larger;">Advisor Request</div>
+           	 	 		 	<div class="col-sm-12 padder-input">
+           	 	 		 			 <div class="col-sm-4 col-xs-4 col-lg-4 mailtextalign" >
+           	 	 		 			 	UserName:
+           	 	 		 			 </div>
+           	 	 		 			 	 <div class="col-sm-8 col-xs-8 col-lg-8 mailtextalign" >
+           	 	 		 			 	 	{{user.Username}}
+           	 	 		 			 </div>
+           	 	 		 	</div>
+           	 	 		 	 <div class="row row-clear-fix"></div>
+           	 	 		 	<div class="col-sm-12 padder-input">
+           	 	 		 			 <div class="col-sm-4 col-xs-4 col-lg-4 mailtextalign" >
+           	 	 		 			 	Email:
+           	 	 		 			 </div>
+           	 	 		 			 	 <div class="col-sm-8 col-xs-8 col-lg-8 mailtextalign " >
+           	 	 		 			 	 	{{user.EmailId}}
+           	 	 		 			 </div>
+           	 	 		 	</div>
+           	 	 		 	 <div class="row row-clear-fix"></div>
+           	 	 		 	<div class="col-sm-12 col-xs-12 padder-input">
+           	 	 		 	 <button type="submit" class="index-btn-sign-up btn btn-sm btn-info btn-flat " style="width: 50%;" ng-click="verifyuser(user.UserId)">Verify</button>
+           	 	 		 	</div>
+           	 	 		 	 <div class="row row-clear-fix"></div>
+           	 	 		 	</div>
+
+           	 	 		 <div id="success">
+
+           	 	 		 	<div> <span style="color:#82b440;">"CONGRATS"</span></div>
+           	 	 		 	<div> <img src="img/Congrats.png">  </div>
+           	 	 		 	 <div> <span >Successfully Verified</span></div>
+
+           	 	 		 </div>
+
+
+           	 	 </div>
+
+           	 </div>
+           </div>
+    </ion-content>
+</ion-view>

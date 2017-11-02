@@ -1,0 +1,206 @@
+<!-- <ion-view class="bg-transparant">
+    <ion-content class="nav-2">  
+        <div class="">
+            <div ng-include src="'app/directives/headerNoAuthenticated.html'"></div>
+
+            <div class="row" style="text-align:center;">
+
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12" style="margin-top:12%;">
+                    <img alt="logo" class="screenshot" src="img/screenshot.png" style="width:100%;">
+                </div>
+
+
+
+                
+
+            </div>
+           
+        </div>
+    </ion-content>
+</ion-view> -->
+<style>
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:45%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 44%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:45%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+
+.navbar-inverse {
+   background-color: #102b45 !important;
+}
+.pane{
+    background-color: #13406b !important;
+}
+.btn-success{
+        background-color: #3E9BE9 !important;
+}
+.signupbtn{
+     background-color: #13406b !important;
+}
+</style>
+<ion-view >
+    <ion-content>  
+       
+          <nav class="navbar navbar-inverse navbar-embossed">
+  <!--   <button class="navbar-toggler hidden-sm-up " data-target="#exCollapsingNavbar2" data-toggle="collapse" type="butto">
+        <img src="img/menu-icon.png" style="width: 24px;">
+        &#9776;
+    </button> -->
+
+ <!--   <a class="navbar-brand pull-right" ui-sref="dashboard"><img alt="logo" src="img/logo-2.png"></a> -->
+    <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a>
+
+   <!--  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="login" >Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="signup">Sign Up</a>
+            </li>
+        </ul>
+    </div> -->
+</nav>
+<div class="tbl-container">
+    <div class="col-sm-12 col-xs-12" style="color: #fff;
+    text-align: center;
+    font-size: xx-large;
+    font-family: signika,sans-serif;"> 
+        Money, Simplified
+    </div>
+    <div class="col-sm-12 col-xs-12" style="text-align:center;padding-top: 20px;">
+        <img alt="logo" src="img/device.png" style="width:300px !important;">
+    </div>
+    <div class="col-sm-12 col-xs-12" style="padding-top:30px;text-align:center;">
+        <div class="col-xs-12 col=sm-6">
+           <a class="btn btn-success btn-lg" style="width:170px;font-size:x-large;" ui-sref="login">Login</a>
+        </div>
+         <div class="col-xs-12 col=sm-6" style="padding-top:20px;">
+             <a class="btn btn-success btn-lg signupbtn" style="width:170px;font-size:x-large;border: 1px solid #fff;" ui-sref="signup" >Signup</a>
+         </div>
+    </div>
+</div>
+     
+    </ion-content>
+</ion-view>

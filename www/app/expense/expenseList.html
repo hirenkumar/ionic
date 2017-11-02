@@ -1,0 +1,110 @@
+<ion-view>
+    <ion-content>  
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-embossed agent-nav">
+                <button class="navbar-toggler hidden-sm-up" data-target="#exCollapsingNavbar" data-toggle="collapse" type="button">&#9776;</button>
+                <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+                    <a class="navbar-brand" href="dashboard.html"><img alt="logo" src="img/logo-2.png"></a>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="nav-left">
+                            <a class="" href="glance.html">Glance</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="results.html">Results</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="goal.html">Goals</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="financial-diary.html">Diary</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="income.html">Income</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="new-expense-entry.html">Expense</a>
+                        </li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img class="pro-img" src=
+                            "img/user1-128x128.jpg"><span class="badge badge-user">42</span> TeamBee</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="settings.html">Profile Settings</a>
+                                </li>
+                                <li>
+                                    <a href="index.html">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- container -->
+        <div class="container tbl-container">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Expense Entry</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="box-footer clearfix">
+                        <h4>Recorded Expense</h4>
+                    </div>
+                    <div class="table-responsive table-hover no-border">
+                        <table class="table no-margin entry">
+                            <tbody>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>$30</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Category:</td>
+                                    <td>Movies</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Recurring?</td>
+                                    <td></td>
+                                    <td class="pbm"><input data-toggle="switch" id="custom-switch-02" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Notes:</td>
+                                    <td>Batman</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Location:</td>
+                                    <td>Times Square, NY</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>27 September 2015</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="box-footer clearfix">
+                            <a class="index-btn-sign-up btn btn-sm btn-info btn-flat pull-left" href="#">Delete Entry</a> <a class=
+                            "index-btn btn btn-sm btn-warning btn-flat pull-right" href="#">Edit Entry</a>
+                        </div>
+                    </div>
+                    <div class="row new-expense">
+                        <div class="col-sm-4 col-xs-12">
+                            <button class="btn btn-primary btn-lg btn-block" type="button"><i class="fa fa-plus"></i> New Expense</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <button class="btn btn-danger btn-lg btn-block" type="button"><i class="fa fa-home"></i> home</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <button class="btn btn-info btn-lg btn-block" type="button"><i class="fa fa-pie-chart"></i> Results</button>
+                        </div>
+                    </div><!-- new-expense -->
+                </div><!-- /.box-body -->
+            </div><!-- container -->
+        </div>
+    </ion-content>
+</ion-view>

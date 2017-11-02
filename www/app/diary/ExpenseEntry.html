@@ -1,0 +1,426 @@
+<style>
+.no-padder{
+  padding: 0px;
+}
+.boxheader{
+    background-color: #2980b9;
+padding: 5px;
+color: white;
+}
+hr {
+   margin-top: 0px !important; 
+     margin-bottom: 0px !important; 
+    border: 0;
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.lefttext{
+  text-align: left;
+}
+.righttext{
+  text-align: left;
+}
+.bootstrap-switch{
+  float: left !important;
+}
+/* STYLES GO HERE */
+}
+
+@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 640px) {
+
+/* STYLES GO HERE */
+}
+
+
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+
+
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+ 
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+.lefttext{
+  text-align: left;
+}
+.righttext{
+  text-align: end;
+}
+.bootstrap-switch{
+  float: right !important;
+}
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+
+
+ @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+</style>
+<ion-view>
+<ion-content>
+ <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+ <div class=" tbl-container" id="main-content">
+  
+<div class="row">
+
+     <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1  b-a r-2x padder-md bg-white signup-box no-padder">
+
+        <div class="boxheader">Expense Entry</div> 
+        <div style="padding: 15px;">
+         <span style="padding: 25px;"><b>Recorded Expense</b></span>
+           <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" >                
+                <div class="col-sm-6 col-xs-12 lefttext ">Amount</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >${{Expense.Amount}}</div>            
+             
+           </div>
+             <div class="row row-clear-fix"></div>
+           <hr>
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" >                
+                <div class="col-sm-6 col-xs-12 lefttext " >Category</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >
+                  <span><i class="fa {{Expense.CategoryImage}}" style="font-size:20px;margin-right: 5px;"></i>{{Expense.CategoryName}}</span>
+
+                 </div>            
+             
+           </div>
+            <div class="row row-clear-fix"></div>
+           <hr>
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" >                
+                <div class="col-sm-6 col-xs-12 lefttext" >Recurring</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >
+                     <input type="checkbox" name="my-checkbox" data-toggle="switch" id="RecurSwitch" ng-model="Expense.IsRecurring">
+
+                 </div>            
+             
+           </div>
+            <div class="row row-clear-fix"></div>
+           <hr>
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;"  ng-show="Expense.IsRecurring">                
+                <div class="col-sm-6 col-xs-12 lefttext">Frequency</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >{{Expense.Frequency}}
+                 </div>            
+             
+           </div>
+            <div class="row row-clear-fix"></div>
+           <hr  ng-show="Income.IsRecurring">
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" >                
+                <div class="col-sm-6 col-xs-12 lefttext">Date</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >{{Expense.ExpenseDate | date:'dd MMMM yyyy'}}
+                 </div>            
+             
+           </div>
+            <div class="row row-clear-fix"></div>
+           <hr  ng-show="Expense.Notes">
+             <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;"   ng-show="Expense.Notes">                
+                <div class="col-sm-6 col-xs-12 lefttext " >Notes</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >{{Expense.Notes}}
+                 </div>            
+             
+           </div>
+            <div class="row row-clear-fix"></div>
+           <hr  ng-show="Expense.Tags">
+             <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" ng-show="Expense.Tags">                
+                <div class="col-sm-6 col-xs-12 lefttext" >Tag</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >{{Expense.Tags}}
+                 </div>            
+             
+           </div>
+           <div class="row row-clear-fix"></div>
+           <hr ng-show="Expense.Location">
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" ng-show="Expense.Location">                
+                <div class="col-sm-6 col-xs-12 lefttext" >Location</div>
+                 <div class="col-sm-6 col-xs-12 righttext" >{{Expense.Location}}
+                 </div>            
+             
+           </div>
+
+
+            <div class="row row-clear-fix"></div>
+           <hr >
+            <div  class="col-sm-12 col-lg-12 col-md-12 col-xs-12"style="padding: 10px;" >                
+             <button type="button" class="btn btn-danger pull-right" ng-click="deleteExpense(Expense.ExpenseId)">Delete </button>
+                 </div>            
+             
+           </div>
+          <div>
+
+
+        </div> 
+
+
+     </div>
+
+  </div>
+</div>
+
+
+</ion-content>
+</ion-view>

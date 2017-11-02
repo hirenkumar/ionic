@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA+BA,WAAY;EACV,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,SAAS;EACtB,OAAO,EAAE,kOAAkO",
+"sources": ["../scss/bootstrap-flex.scss"],
+"names": [],
+"file": "bootstrap-flex.css"
+}

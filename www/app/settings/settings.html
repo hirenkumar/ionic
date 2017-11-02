@@ -1,0 +1,477 @@
+<style>
+.nya-bs-select .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.dropdown-toggle.btn-default {
+    background: #2980b9 !important;
+    border-color: #2980b9 !important;
+}
+.successmsg{
+     color: #2980b9;
+font-size: medium;
+}
+.modal-backdrop{
+  background-color: #FFF !important;
+}
+.boxheader{
+    background-color: #2980b9;
+padding: 5px;
+color: white;
+}
+.no-padder{
+  padding: 0px;
+}
+.boxcontrolpadding{
+  padding: 10px;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+.ionic_datepicker_popup .calendar_grid {
+    height: 260px !important;
+}
+.popup-body {
+    padding: 17px;
+	}
+
+</style>
+
+<ion-view>
+    <ion-content>  
+       <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+         <div class="" style="margin-top: 5%;">
+
+             <div class="row signup-row" id="maindiv" style="padding-bottom: 0px;">  
+
+                <form  name="signupForm" style="width:100%;" >  
+
+                    <div class="col-sm-12" id="step-1">            
+                <p class="text-danger" id="register-errors"></p>
+                 <p  id="updatesuccess"></p>
+                <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box ">
+
+                    <div class="rndfilediv">
+                        <input type="file" name="Image" class="rndfile" onchange="angular.element(this).scope().LoadFileData(this.files)" accept="image/png, image/jpeg"  />
+                    </div>
+                     <div ng-if="signupForm.Image.$invalid" ng-messages="signupForm.Image.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a User Image</div>
+                        </div>
+                         <div class="row row-clear-fix"></div>
+
+                    <div class="input-group" ng-class="(signupForm.Username.$invalid && signupForm.Username.$dirty)  || ( signupForm.Username.$pristine  &&  step1submitted) ? '': 'cnt'">
+
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control inputtext" placeholder="UserName" name="Username" ng-model="sgnfrm.Username" ng-required="true" validate-Username>
+                    </div>
+                      <div ng-if="(signupForm.Username.$invalid && signupForm.Username.$dirty)  || ( signupForm.Username.$pristine  &&  step1submitted)" ng-messages="signupForm.Username.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a User Name</div>
+                            <div ng-message="username">User Name must be at least 5 characters long. Special characters are not allowed</div>
+                        </div>
+ <div class="row row-clear-fix"></div>
+                    <div class="input-group" ng-class="(signupForm.EmailId.$invalid && signupForm.EmailId.$dirty)  || ( signupForm.EmailId. $pristine  &&  step1submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control inputtext" placeholder="Email Id"name="EmailId" ng-model="sgnfrm.EmailId" ng-required="true">
+                    </div>
+                      <div ng-if="(signupForm.EmailId.$invalid && signupForm.EmailId.$dirty)  || ( signupForm.EmailId. $pristine  &&  step1submitted)" ng-messages="signupForm.EmailId.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide an email address</div>
+                            <div ng-message="email">Email address is invalid</div>
+                        </div>
+
+                         <div class="row row-clear-fix"></div>
+
+
+                    <div class="input-group "ng-class="(signupForm.Password.$invalid && signupForm.Password.$dirty)  || ( signupForm.Password. $pristine  &&  step1submitted) ? '': 'cnt'">
+                        <span class="input-group-addon"><i class="fa fa-lock" style="font-size: 20px;"></i></span>
+                        <input type="Password" class="form-control inputtext" placeholder="New Password" name="Password" ng-model="sgnfrm.Password" >
+                    </div>
+                      <div ng-if="(signupForm.Password.$invalid && signupForm.Password.$dirty)  || ( signupForm.Password. $pristine  &&  step1submitted)" ng-messages="signupForm.Password.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a password</div>
+                        </div>
+                         <div class="row row-clear-fix"></div>
+
+
+
+
+                    <div class="input-group cnt" ng-class="{'has-error' : (!signupForm.repeatPassword.$pristine && signupForm.Password.$modelValue !== signupForm.repeatPassword.$modelValue) || passwordMismatch}">
+                        <span class="input-group-addon"><i class="fa fa-lock" style="font-size: 20px;"></i></span>
+                        <input type="password" class="form-control inputtext" placeholder="Confirm New Password"name="repeatPassword" ng-model="repeatPassword"    ng-change="myFunction()">
+                    </div>
+                      <p class="small text-left text-danger" ng-if="(!signupForm.repeatPassword.$pristine && signupForm.Password.$modelValue !== signupForm.repeatPassword.$modelValue) || passwordMismatch">Passwords do not match</p>
+                       <div class="row row-clear-fix"></div>
+                    <div class="input-group">
+                        <input type="radio" name="Gender" class="radio-inline" checked="checked"  ng-value="'Male'"  ng-model="sgnfrm.Gender"/>     Male                <input type="radio" name="Gender" class="radio-inline"  value=" Female" ng-value="'Female'" ng-model="sgnfrm.Gender"/>     Female
+                    </div>
+
+                   <div class="row row-clear-fix"></div>
+                      <div class="input-group" ng-class="{'has-error' : dateInvalid && frmExpense.$submitted}" style="width:100%;">
+
+                        <span ng-click="openDatePicker()" id="expensedate" class="form-control"  ng-model="sgnfrm.DateOfBirth | date:'dd/MM/yyyy'" style="text-align: left;">{{sgnfrm.DateOfBirth | date:'dd/MM/yyyy'}} </span>
+                    </div>
+                     <div class="input-group text-xs text-danger" ng-if="dobinvalid">You must Select a DOB</div>
+                    <div class="row row-clear-fix"></div>
+                     
+                     
+                                         
+ 
+            <button type="submit" class="btn btn-info" ng-click="updateProfile(sgnfrm)">Update Profile</button>
+
+
+
+
+                </div>
+
+
+              </div>
+
+                </form>
+             </div>
+
+              
+                   <div class="row signup-row" id="maindiv">  
+
+                          <form  name="iconForm" style="width:100%;" > 
+                               <p class="text-danger" id="icon-errors"></p>
+                 <p  class="successmsg" id="icon-success"></p>
+                                 <div class="col-sm-12" id="step-1">            
+                <p class="text-danger" id="tags-errors"></p>
+                 <p  class="successmsg" id="tags-success"></p>
+                <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box no-padder">
+                                 <div class="boxheader">Manage Categories</div>  
+                                  <div class="input-group boxcontrolpadding" ng-class="(iconForm.CategoryName.$invalid && iconForm.CategoryName.$dirty)  || ( iconForm.CategoryName.$pristine  &&  iconForm.CategoryName.$submitted) ? '': 'cnt'">
+
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control inputtext" placeholder="Name" name="CategoryName" ng-model="icnfrm.CategoryName" ng-change="updatename()">
+                    </div>
+                      <div ng-if="(iconForm.CategoryName.$invalid && iconForm.CategoryName.$dirty)  || ( iconForm.CategoryName.$pristine  &&  iconForm.$submitted)" ng-messages="iconForm.CategoryName.$error" class="small text-danger text-left">
+                            <!-- <div ng-message="required">You must provide a Icon Name</div> -->
+
+                        </div>
+                         <div class="input-group text-xs text-danger" ng-if="iconnameinvalid">You must provide a Icon Name</div>
+
+                         <div class="boxcontrolpadding">
+                                        <div class="form-group">
+                                          
+                                            <ol class="nya-bs-select" ng-model="icnfrm.CategoryType" style="width:100%;" ng-change="typechange(icnfrm.CategoryType)">
+                                             
+                                            <li nya-bs-option="i in getIconTypes" >
+                                            <a>
+                                            {{i.name}}
+                                            </a>
+                                            </li>
+                                            </ol>
+                                        </div>
+                                      
+                                    </div>
+                          <div class="input-group text-xs text-danger" ng-if="icontypeinvalid">You must Select a Icon Type</div>
+
+                        <div class="input-group boxcontrolpadding" style="margin-bottom: 15px;">
+                             <button type="button" class="btn btn-default" ng-click="openModal()" >Select icon <i class="fa {{icon}}"></i></button>
+                        </div>                           
+                         <div class="input-group text-xs text-danger" ng-if="iconinvalid">You must Select a Icon</div>
+
+                         <button type="submit" id="addIconButton"class="btn btn-info" ng-click="addIcon(icnfrm)">Add Icon</button>
+                          <button type="button" id="updateIconButton" class="btn btn-info" ng-click="UpdateIcon(icnfrm)">Update Icon</button>
+                        <div class="row row-clear-fix"></div>
+                            <div class="col-sm-12" style="overflow-x:scroll;font-size:initial;">
+
+                          <table  class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                        <thead style="background: #cdcdcd;">
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Icon</th>
+                                                 <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Type</th>
+                                                  <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending"></th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr data-ng-repeat="c in UserCategories | filter:query">
+
+                                                <td style="color: #000;text-align: left;"> {{c.CategoryName}}</td>
+                                                <td style="text-align: left;"><i class="fa {{c.CategoryImage}}"></i></td>
+                                                 <td style="text-align: left;">{{c.CategoryType}}</td>
+                                                <td>
+                                                  <button type="button" class="btn btn-warning btn-xs" ng-click="editCategory(c)">Edit</button>
+                                                </td>
+                                                <td>
+                                                   <button type="button" class="btn btn-danger btn-xs" ng-click="deleteCategory(c.UserCategoryId)">Delete</button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                  </div>
+
+                </div>
+            </div>
+                          </form>
+                 </div>
+
+
+
+                 <div class="row signup-row" id="maindiv"  style="padding-bottom: 0px;">  
+                          <form  name="tagForm" style="width:100%;" > 
+
+                                 <div class="col-sm-12" id="step-1">            
+                <p class="text-danger" id="tags-errors"></p>
+                 <p  class="successmsg" id="tags-success"></p>
+                <div class="col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box no-padder">
+                              <div class="boxheader">Add Tags</div>    
+                                  <div class="input-group boxcontrolpadding" ng-class="(tagForm.TagName.$invalid && tagForm.TagName.$dirty)  || ( tagForm.TagName.$pristine  &&  step1submitted) ? '': 'cnt'">
+
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control inputtext" placeholder="Tag Name" name="TagName" ng-model="tgfrm.TagName" ng-change="updatetag()">
+                    </div>
+                      <div ng-if="(tagForm.TagName.$invalid && tagForm.TagName.$dirty)  || ( tagForm.TagName.$pristine  &&  step1submitted)" ng-messages="tagForm.TagName.$error" class="small text-danger text-left">
+                            <div ng-message="required">You must provide a Tag Name</div>
+                        </div>
+                          <div class="input-group text-xs text-danger" ng-if="tagnameinvalid">You must provide a Tag Name</div>
+                         <button type="submit" class="btn btn-info" id="addtag" ng-click="addTag(tgfrm)">Add Tag</button>
+                          <button type="button" class="btn btn-info" id="updatetag" ng-click="UpdateTag(tgfrm)">Update Tag</button>
+                             <div class="row row-clear-fix"></div>
+                            <div class="col-sm-12" style="overflow-x: scroll;font-size:initial">
+
+                          <table  class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                        <thead style="background: #cdcdcd;">
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Tag Name</th>
+                                              
+                                                  <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending"></th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 86px;" aria-sort="ascending" aria-label="Name: activate to sort column descending"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr data-ng-repeat="tag in UserTags | filter:query">
+
+                                                <td style="color: #000;text-align: left;"> {{tag.TagName}}</td>
+                                              
+                                                <td>
+                                                  <button type="button" class="btn btn-warning btn-xs" ng-click="editTag(tag.TagId)">Edit</button>
+                                                </td>
+                                                <td>
+                                                   <button type="button" class="btn btn-danger btn-xs" ng-click="deleteTag(tag.TagId)">Delete</button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                  </div>
+
+                </div>
+            </div>
+                          </form>
+                 </div>
+
+
+
+
+
+
+            </div>
+<!-- <div class="modal fade " id="modalIcons" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Icons</h4>
+            </div>
+            <div class="modal-body">
+                <a ng-repeat="icon in icons" class="btn btn-info btn-sm" ng-click="selectIcon(icon)" style="margin-right:3px;margin-bottom:3px;"><i class="fa {{icon}}"></i></a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+    </ion-content>
+</ion-view>
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view style="height: 500px;">
+    <ion-header-bar>
+      <h1 class="title">Icons</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="modal-body">
+                <a ng-repeat="icon in icons" class="btn btn-info btn-sm" ng-click="selectIcon(icon)" style="margin-right:10px;margin-bottom:10px;height: 35px;
+width: 35px;"><i class="fa {{icon}}"></i></a>
+            </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

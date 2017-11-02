@@ -1,0 +1,190 @@
+
+ <style>
+ @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+.headerlogo{
+position: absolute;
+left: 47%;
+}
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+</style>
+<ion-view>
+    <ion-content>  
+       <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+         <div class="container tbl-container" id="main-content">
+       <!--      <a href="javascript:void(Tawk_API.toggle())"> <img alt="connect"  src="img/Cashy Connect.png" style="width:100%;"> </a> -->
+           <img alt="connect"  src="img/Cashy Connect.png" style="width:100%;">
+        
+        <!-- <div tawk-to="{{id}}"></div> -->
+       </div>
+
+    </ion-content>
+</ion-view>
+   
+

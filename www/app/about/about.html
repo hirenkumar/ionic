@@ -1,0 +1,267 @@
+<style>
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+</style>
+<ion-view>
+ <ion-content>  
+ <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container tbl-container" id="main-content">
+   
+    
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title"> <b>About Us</b> </h3>
+        </div><!-- /.box-header -->
+         <div class="box-header with-border">
+            <h3 class="box-title"> <b>Vision</b> </h3>
+        </div>
+        <div class="box-body" style="text-align: justify;">
+
+            <p>
+               Cashy has been developed with the humble vision of helping people around the world manage their money.
+            </p>
+              <p>
+              The philosophy of 'Money, Simplified' is at the heart of what we do. It is a tool to help simplify the world of money in the digital age so people from a young age can start to learn about money. Cashy through its simple design and easy-to-use features, is made to help them feel empowered and engaged with managing their money. Built as a multi-platform tool, Cashy is available across smartphones, tablets and computers 'Anywhere, Anytime'.
+            </p>
+             <p>
+             Cashy hopes to spread the message across the globe of making money management in the digital age, quick, simple and fun.
+            </p>
+             <p>
+              <strong style="color: #2980b9;"> What is...</strong>
+            </p>
+
+            <p>
+                <strong>1. What is Cashy?</strong><br/>
+                An easy way to manage your money online. It is to help people of all ages track, engage and be empowered to take control of their finances.
+            </p>
+
+            <p>
+                <strong>2. What is the Diary?</strong><br/>
+                The Diary is a simple and quick way to keep a track of your money, so you can always look back at what dates had transactions occurring. It also helps to see any upcoming financials that are logged.
+            </p>
+
+            <p>
+                <strong>3. What are Tags?</strong><br/>
+               Tagging is a simple way to categorise buckets of income and expenses. You can create tags, from the settings menu and then use these tags to help you categorise multiple income or expense entries into buckets. For example you have spent money on Food, Entertainment and Education but all from the 1 Credit Card, then you can tag all these expense entries with CC1'. The possibilities are unlimited.
+            </p>
+
+            <p>
+                <strong>4. What is the Cashy Connect?</strong><br/>
+               Cashy Connect is where you can connect with professionals in the financial sector and ask them for guidance or help in understanding key financial topics. You simply select the topic of interest, then the next available expert will be on hand to help you with your question.
+            </p>
+
+            <p>
+             Please note: Cashy is not liable for any financial actions/decisions taken on behalf of these conversations. This chat forum should be used to educate and guide users about money. Users abusing the ground rules may have their accounts revoked upon investigation.
+            </p>
+           
+            <p>
+              <strong style="color: #2980b9;"> Customisations and Security</strong>
+            </p>
+
+            <p>
+                <strong>1. Can I change income expense category names?</strong><br/>
+              Yes. This can be setup in the 'Settings' page.
+            </p>
+
+
+            <p>
+                <strong>2. Can I view results by different time filters?</strong><br/>
+              Yes Cashy alllows you to filter data by many options including monthly, yearly. You can also isolate information for example, if you only want to view expense history.
+            </p>
+
+             <p>
+                <strong>3. How does the security of my data and information work?</strong><br/>
+              What you enter only you can see. The server has been encrypted to protect even administrators from being able to identify which numbers correspond to which account.
+            </p>
+
+             <p>
+              There will be many ongoing features and developments as we grow, so stay tuned to our Facebook and Twitter accounts for the latest information.
+            </p>
+
+
+             <p>
+              <strong style="color: #2980b9;"> Support and Enquiries</strong>
+            </p>
+            <p>
+                For all enquiries or support feel free to contact us as <a href="mailto:support@getcashy.com" target="_top"><span style="color: blue;">support@getcashy.com</span></a>.
+            </p>
+
+            <p>
+                <a ui-sref="privacy"><span style="color: blue;">Privacy Policy</span></a>                
+                <br/>
+                <a ui-sref="terms"><span style="color: blue;">Terms of Use</span></a>                                
+            </p>
+        </div><!-- /.box-body -->
+    </div><!-- container -->
+</div>        
+</ion-content> 
+</ion-view> 

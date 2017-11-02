@@ -1,0 +1,55 @@
+<ion-view>
+    <ion-content> 
+
+   <div class=" tbl-container" id="main-content">
+   <!-- 	<nav class="navbar navbar-inverse navbar-embossed agent-nav">
+                 <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a>
+             </nav> -->
+    <div  ng-include src="'app/directives/header.html'"></div>
+<div class="row">
+    <div class="row signup-row col-lg-8 col-lg-offset-2  col-md-8  col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md  r-2x padder-md bg-white " id="maindiv" style="display: block !important;">
+
+ 
+                <div class="col-xs-12  col-sm-12 col-lg-12 income-select">
+                    <a ui-sref="createIncome({type: 'partTime'})"><button class="btn btn-primary btn-lg btn-block" type="button">Recurring - Part Time</button></a>
+                </div>
+                <div class="col-xs-12  col-sm-12 col-lg-12 income-select">
+                    <a ui-sref="createIncome({type: 'regularPaycheck'})"><button class="btn btn-danger btn-lg btn-block" type="button">Recurring - Regular Paycheck</button></a>
+                    *<small>Use these options for paychecks, regular jobs and any income source that is likely to repeat itself</small>
+                </div>
+                <div class="col-xs-12  col-sm-12 col-lg-12 income-select">
+                    <a ui-sref="createIncome({type: 'oneOff'})"><button class="btn btn-info btn-lg btn-block" type="button">One Off</button></a> *<small>use this for one
+                    off income including gifts, allowances, cheques.</small>
+                </div>
+          
+
+
+    </div>
+</div>
+
+    <!-- <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Income Entry</h3>
+        </div>
+        <div class="box-body">
+            <div class="box-footer clearfix">
+              
+            </div>
+            <div class="row new-expense">
+                <div class="col-xs-12 income-select">
+                    <a ui-sref="income-create({type: 'partTime'})"><button class="btn btn-primary btn-lg btn-block" type="button">Recurring - Part Time</button></a>
+                </div>
+                <div class="col-xs-12 income-select">
+                    <a ui-sref="income-create({type: 'regularPaycheck'})"><button class="btn btn-danger btn-lg btn-block" type="button">Recurring - Regular Paycheck</button></a>
+                    *<small>Use these options for paychecks, regular jobs and any income source that is likely to repeat itself</small>
+                </div>
+                <div class="col-xs-12 income-select">
+                    <a ui-sref="income-create({type: 'oneOff'})"><button class="btn btn-info btn-lg btn-block" type="button">One Off</button></a> *<small>use this for one
+                    off income including gifts, allowances, cheques.</small>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+     </ion-content>
+</ion-view>

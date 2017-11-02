@@ -1,0 +1,72 @@
+<ion-view>
+    <ion-content>  
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-embossed agent-nav">
+                <button class="navbar-toggler hidden-sm-up" data-target="#exCollapsingNavbar" data-toggle="collapse" type="button">&#9776;</button>
+                <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+                    <a class="navbar-brand" href="dashboard.html"><img alt="logo" src="img/logo-2.png"></a>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="nav-left">
+                            <a class="" href="glance.html">Glance</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="results.html">Results</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="goal.html">Goals</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="financial-diary.html">Diary</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="income.html">Income</a>
+                        </li>
+                        <li class="nav-left">
+                            <a class="" href="new-expense-entry.html">Expense</a>
+                        </li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img class="pro-img" src=
+                            "img/user1-128x128.jpg"><span class="badge badge-user">42</span> TeamBee</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="settings.html">Profile Settings</a>
+                                </li>
+                                <li>
+                                    <a href="index.html">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- container -->
+        <div class="container tbl-container">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Income Entry</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="box-footer clearfix">
+                        <h4>Select the type of Income you wish to Add</h4>
+                    </div>
+                    <div class="row new-expense">
+                        <div class="col-xs-12 income-select">
+                            <a href="income-entry.html"><button class="btn btn-primary btn-lg btn-block" type="button">Recurring - Part Time</button></a>
+                        </div>
+                        <div class="col-xs-12 income-select">
+                            <a href="income-entry.html"><button class="btn btn-danger btn-lg btn-block" type="button">Recurring - Regular Paycheck</button></a>
+                            *<small>Use these options for paychecks, regular jobs and any income source that is likely to repeat itself</small>
+                        </div>
+                        <div class="col-xs-12 income-select">
+                            <a href="income-entry.html"><button class="btn btn-info btn-lg btn-block" type="button">One Off</button></a> *<small>use this for one
+                            off income including gifts, allownces, cheques.</small>
+                        </div>
+                    </div><!-- new-expense -->
+                </div><!-- /.box-body -->
+            </div><!-- container -->
+        </div>
+    </ion-content>
+</ion-view>

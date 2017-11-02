@@ -1,0 +1,370 @@
+<style>
+.boxmargin{
+    margin-right: 2%;
+}
+.boxheader{
+    background-color: #2980b9;
+padding: 15px;
+color: white;
+}
+.paddernone{
+    padding: 0px;
+}
+.card1-pad{
+    padding: 10px;
+}
+.card1-value{
+    text-align: end;
+}
+.btn-default{
+    background-color: #2980b9;
+}
+.nya-bs-select .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.dropdown-toggle.btn-default {
+    background: #2980b9 !important;
+    border-color: #2980b9 !important;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+</style>
+
+<ion-view>
+    <ion-content >  
+      <div id="mydiv" ng-show="loadchart">
+    <img src="img/loading_300.gif" class="ajax-loader"/>
+</div>
+
+     <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+      
+      
+        <div class="container tbl-container" id="main-content">
+          <span style="font-size: larger;font-weight: bold;"> Results</span>
+           <div class="">
+            <div class="col-sm-8 col-lg-8 col-xs-12 m-t-md  bg-white  ">
+                <div class="b-a signup-box">
+                    <div class="boxheader">Summary</div>
+
+                    <div class="col-sm-8" style="display: flex;padding: 10px;font-size: 12px;
+">
+                        
+                     <ul style="display: flex;">
+                            <li data-ng-repeat="i in employees" style="padding-right: 15px;">
+
+                                    <div class="input-group cnt">
+                        <label class="c-input c-checkbox">
+                            <input id="{{i.name}}" type="checkbox" value="{{i.name}}"  ng-checked="selection.indexOf(i.name) > -1" ng-click="toggleSelection(i.name)" >
+                            <span class="c-indicator"></span> {{i.name}}
+                        </label>
+                    </div>
+                                                  <!--  <input type="checkbox" ng-model="selected[record.name]"> {{record.name}}-->
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-4" style="padding: 10px;">
+
+                            <ol class="nya-bs-select" ng-model="duration" ng-change="getDurationChange(duration)" style="width:100px;">
+    <li data-value="Year" class="nya-bs-option">
+        <a>
+            Year
+        </a>
+    </li>
+    <li data-value="Month" class="nya-bs-option">
+        <a>
+            Month
+        </a>
+    </li>
+    
+</ol>
+                <span id="yearselector">
+            <ol class="nya-bs-select" ng-model="ByDefaultMonthYear"  ng-change="monthyearchange(ByDefaultMonthYear)" style="width:100px;">
+    <li nya-bs-option="i in getyear" >
+        <a>
+            {{i.Year}}
+        </a>
+    </li>
+</ol>
+</span>
+
+                    </div>
+                   
+                   <div class="col-sm-12" style="overflow: auto;">
+                      <div id="chart_div" ></div>
+
+                   </div>
+                    
+
+
+           
+<div class="clear clearfix"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-lg-4 col-xs-12 m-t-md   bg-white ">
+                <div class="b-a signup-box">
+                 <div class="boxheader">{{Card1Header}}</div>
+            <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Income</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{TotalIncome}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+             <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Expenses</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{TotalExpense}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+             <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Net Income</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{NetIncome}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+          <div class="col-sm-12">    <hr></div>
+             <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Savings</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{Saving}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+            <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Invest</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{Invest}}</div>
+            </div>
+          <div class="clear clearfix"></div>
+                </div>
+            </div>
+        </div>
+       <div class="clear clearfix"></div>
+        <div class="">
+
+            <div class="col-sm-4 col-lg-4 col-xs-12 m-t-md bg-white ">
+                <div class="b-a signup-box">
+                 <div class="boxheader">Income</div>
+                
+                 <div id="piechart1"></div>
+            </div>
+            </div>
+
+             <div class="col-sm-4 col-lg-4 col-xs-12 m-t-md bg-white">
+                 <div class="b-a signup-box">
+                 <div class="boxheader">Expenses</div>
+                
+                
+                 <div id="piechart2"></div>
+             </div>
+             </div>
+
+              <div class="col-sm-4 col-lg-4 col-xs-12 m-t-md bg-white " style="max-height:265px;">
+                 <div class="b-a signup-box" >
+                     <div class="boxheader">Tags</div>
+                   <div style="max-height:200px;overflow-y:scroll;">
+                 <div ng-repeat="t in Tags">
+                          <div class="col-sm-12 card1-pad" >  
+                            <div class="col-sm-6 col-xs-6" style="color: #2980b9;">{{t.Tag}}</div> 
+                        </div>
+                                 <div class="clear clearfix"></div>
+
+                <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Income</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{t.income}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+             <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Expenses</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{t.expense}}</div>
+            </div>
+             <div class="clear clearfix"></div>
+             <div class="col-sm-12 card1-pad" >     
+                    <div class="col-sm-6 col-xs-6">Net Income</div> 
+                    <div class="col-sm-6 col-xs-6 card1-value">${{t.netincome}}</div>
+            </div>
+              <div class="clear clearfix"></div>
+               <div class="col-sm-12">    <hr style="background-color: #cdcdcd;height:2px;"></div>
+               <div class="clear clearfix"></div>
+                 </div>
+
+             </div>
+                
+                           
+               </div>
+             </div>
+
+        </div>
+
+
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,368 @@
+<style>
+.expenceheader{
+    color: #fff;
+    position:absolute;
+    left: 45%;
+    top: 23%;
+}
+.logostyle{
+    height: auto;
+width: 60px;
+margin: auto;
+padding: 8px 10px;
+border: 1px solid #bdc3c7;
+border-radius: 50%;
+margin-top: 10px;
+}
+.steplogos1:hover{
+    background:#2980B9;
+    color:#fff;
+
+}
+
+
+/*.icon:hover{
+   box-shadow: 0px 0px 3px 2px #cacaca;
+}*/
+.iconselected{
+     background:#2980B9 !important;
+    color:#fff;
+}
+.iconselectedtext{
+    color: #2980b9;
+}
+.nya-bs-select .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.dropdown-toggle.btn-default {
+    background: #2980b9 !important;
+    border-color: #2980b9 !important;
+}
+.steplogos1 {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border: 1px solid #bdc3c7;
+}
+.stepiconsize {
+    font-size: 25px !important;
+}
+.bootstrap-switch{
+  float: right !important;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+.headerlogo{
+    position: absolute;
+left: 37%;
+}
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:47%;
+}
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1300px){
+    .headerlogo{
+        position: absolute;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+position: absolute;
+left: 47%;
+}
+
+@media only screen
+and (min-device-width : 1225px)
+and (max-device-width : 1823px)
+{
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+   left: 47%;
+}
+}
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left: 45%;
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.headerlogo{
+    position: absolute;
+    left:40%;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+
+}
+
+.ionic_datepicker_popup .calendar_grid {
+    height: 260px !important;
+}
+.popup-body {
+    padding: 17px;
+	}
+
+</style>
+
+<ion-view>
+    <ion-content>  
+      <nav class="mobile-nav clearfix">
+    <div id="mobile-nav-bar">
+
+        <span style="color:white;">Welcome <span style="padding-left: 10px;">{{loggedInUser.Username}}</span></span>
+
+       <!--  <a class="headerlogo" ><img alt="logo" src="img/logo-2.png" style="width: 100px !important;"></a> -->
+    <button ng-show="mobileMenuShowBackBtn" type="button" id="go-back-btn" ng-click="goBack()"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" id="nav-trigger-btn" ng-click="showMobileNavMenu()"><img src="img/menu-icon.png"></button>
+        <div id="nav-page-title">
+          <span id="nav-page-title-main" ></span>
+        
+        </div>
+    </div>
+<div id="mobile-page-overlay" ng-click="hideMobileNavMenu()"></div>
+    <div id="mobile-nav-menu">
+        <div class="mobile-nav-menu-inner">
+            <div class="menu-section">
+                <div class="menu-user" style="color: black;">
+                    <img class="pro-img" ng-src="{{loggedInUser.Image == undefined ? 'img/user.jpg' : loggedInUser.Image}}" height="100px" width="100px" style="width:100px !important;">
+                    {{loggedInUser.Username}}
+                </div>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Record</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="createIncome" ><i class="fa fa-plus fa-fw text-success"></i> New Income</a></li>
+                    <li class="nav-left"><a ui-sref="createExpense" ><i class="fa fa-plus fa-fw text-success"></i> New Expense</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title" ui-sref="dashboard" >Dashboard</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="result"><i class="fa fa-bar-chart fa-fw text-success"></i> Results</a></li>
+                    <li class="nav-left"><a ui-sref="diary"><i class="fa fa-calendar fa-fw text-success"></i> Diary</a></li>
+                    <li class="nav-left"><a ui-sref="connect"><i class="fa fa-certificate fa-fw text-success"></i> Connect</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <span class="section-title">Settings</span>
+                <ul class="nav">
+                    <li class="nav-left"><a ui-sref="settings"><i class="fa fa-cog fa-fw text-success"></i> Settings</a></li>
+                    <li class="nav-left"><a ui-sref="about"><i class="fa fa-question fa-fw text-success"></i> About</a></li>
+                    <li class="nav-left"><a ui-sref="logout"><i class="fa fa-sign-out fa-fw text-success"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <div class=" tbl-container" id="main-content">
+<div class="row" >
+
+    <div class="row signup-row col-lg-4 col-lg-offset-4  col-md-6  col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 m-t-md b-a r-2x padder-md bg-white signup-box" id="maindiv">
+     <form class="entry-form table-responsive table-hover income-entry no-border" name="frmIncome" ng-submit="save(formIncome)" novalidate style="overflow: unset !important;">
+
+         <div class="col-sm-12 col-lg-12 col-xs-12" style="padding-bottom: 5%;color: #2980b9;font-size: larger;">Income Entry</div>
+              <p class="text-danger" id="incomeerrors"></p>
+                                   <p  id="SuccessMsg"></p>
+
+      
+
+            <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input" >
+                                        <div class="form-group" ng-class="{'has-error' : frmIncome.Amount.$invalid && (frmIncome.$submitted || !frmIncome.Amount.$pristine)}">
+                                            <label class="sr-only" for="Amount">Amount (in {{currentUser.currency}})</label>
+                                            <div class="input-group">
+                                               <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                                                <input class="form-control" name="Amount" id="Amount" placeholder="Enter Amount" type="number" ng-model="formIncome.Amount" ng-required="true" validate-float ng-change="updateAmount()">
+                                            </div>
+                                              <p class="text-xs text-danger" ng-if="AmountInvalid">You must enter a amount</p>
+                                        </div>
+                                    </div>
+                               
+                                 <div class="row row-clear-fix"></div>
+                             
+                                    <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input" style="text-align: left;">
+                                      <span>  Select a Category </span>
+                                    
+                                    </div>
+                                     <div class="row row-clear-fix"></div>
+
+                                    <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+
+                                        <div ng-repeat="c in Incomecategory">
+                                            <div class="col-md-4 col-sm-4 col-xs-6 col-lg-4 icon"  id="{{c.CategoryName}}" ng-click="IconClick(c.CategoryName,c.UserCategoryId)" ng-model="c.CategoryName">
+                                        
+                                            <div class="steplogos1" id="step1logo" style="margin: auto;cursor:pointer;"  ng-class="Selectedicn == c.CategoryName ? 'iconselected' :''"><i class="fa {{c.CategoryImage}} stepiconsize" style="margin-top: calc(50% - 6px) !important;"></i></div>
+
+                                         <small  style="font-size: 66%;display: block;margin-top: 10px;" ng-class="Selectedicn == c.CategoryName ? 'iconselectedtext' :''">
+                                          {{c.CategoryName}}</small>
+                                        </div>
+                                        </div>
+
+                                     </div>
+                                     <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+                                       <p class="text-xs text-danger" ng-if="categoryInvalid">You must select a Category</p></div>
+                                          
+
+
+                                 <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+                                    <hr>
+                                </div>
+                                <div class="row row-clear-fix"></div>
+                                          <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input" >
+
+                                         <div class="col-sm-6 col-xs-6 col-lg-6">
+                                            <span style="float:left;">Recurring?</span>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                                        <input type="checkbox" name="my-checkbox" data-toggle="switch" id="RecurSwitch" ng-model="formIncome.IsRecurring" >                                      
+                                    </div>
+                                </div>
+
+
+
+                                    <div class="row row-clear-fix"></div>
+                                     <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+                                        <div class="form-group" ng-class="{'has-error' : frmIncome.Frequency.$invalid && (frmIncome.$submitted || !frmIncome.Frequency.$pristine)}">
+                                          <select class="form-control show-tick"  id="CategoryName" name="Frequency" data-ng-options="c.name as c.name for c in recurrences"   ng-show="formIncome.IsRecurring" ng-model="formIncome.Frequency" >
+                                        <option value=""> -- Select Frequency--</option>
+                                        </select>
+                                  <!--       <p class="text-xs text-danger" ng-if="recurrencyInvalid">You must select a Frequency</p> -->
+                                            </div>
+
+                                     </div>
+                               
+                                      <div id="morelink" >      
+                                    <div class="row row-clear-fix"></div>
+                                <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+                                   <span style="color: #2980b9;font-size: small;" >Add More Details <br> <i class="fa fa-chevron-down"  style="cursor: pointer;" ng-click="showMoreDetails()"></i></span>
+
+                                </div>
+                                    </div>
+                                <div id="moredetails" ng-show="step==2">
+                                         <div class="row row-clear-fix"></div>
+                
+                                    <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input" >
+                                        <div class="form-group" >
+                                            <input type="text" placeholder="Notes [Optional]" class="form-control" ng-model="formIncome.Notes">
+                                        </div>
+
+                                    </div>
+                                     <div class="row row-clear-fix"></div>
+                             
+                                    <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input">
+                                        <div class="form-group">
+                                            <ol class="nya-bs-select" ng-model="formIncome.Tags" style="width:100%;" >
+                                             
+                                            <li nya-bs-option="i in getTags" >
+                                            <a>
+                                            {{i.TagName}}
+                                            </a>
+                                            </li>
+                                            </ol>
+                                        </div>
+                                        <!--   <p class="text-xs text-danger" ng-if="tagsInvalid">You must Enter a Tag</p> -->
+                                    </div>
+
+
+                                <div class="row row-clear-fix"></div>
+                
+                                    <div class="col-sm-10 col-xs-12 col-lg-10 col-sm-offset-1 col-lg-offset-1 padder-input" >
+                                        <div class="form-group" ng-class="{'has-error' : dateInvalid && frmIncome.$submitted}">
+                                            <span ng-click="openDatePicker()" id="expensedate" class="form-control"  ng-model="formIncome.IncomeDate | date:'dd/MM/yyyy'" style="text-align: left;">{{formIncome.IncomeDate | date:'dd/MM/yyyy'}} </span>
+                                        
+                                        </div>
+                                    </div>                                 
+                                </div>
+                                 <div class="row row-clear-fix"></div>
+                                        <button type="submit" class="index-btn-sign-up btn btn-sm btn-info btn-flat " style="width: 50%;">Submit</button>
+                                    <div class="row row-clear-fix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>      
+    </ion-content>
+</ion-view>
